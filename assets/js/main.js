@@ -110,4 +110,32 @@
 
 	});
 
+	// form submit
+	var $form = $('#contact-form'),
+		form = $form.get(0);
+	$form.on('submit', function(e) {
+		e.preventDefault();
+		var data = $form.serializeArray().reduce(function(obj, item) {
+	    	obj[item.name] = item.value;
+	    	return obj;
+		}, {});
+		function success() {
+			$('#contact-form-content').fadeOut({
+				duration: 400
+			});
+			setTimeout(function() {
+				$('#contact-form-success').fadeIn();
+			}, 500);
+			if (form.reset) {
+				form.reset();
+			}
+		}
+		$.post({
+			url: 'https://briskforms.com/go/ed69e480389e8dbcfe46a6b58633c32a',
+			dataType: 'json',
+			data: data,
+			success: success,
+		});
+	})
+
 })(jQuery);

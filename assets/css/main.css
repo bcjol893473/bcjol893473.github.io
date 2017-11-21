@@ -18,6 +18,10 @@
 		vertical-align: baseline;
 	}
 
+	h3,h4,h5,h6 {
+		display: inline-block;
+	}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -2428,18 +2432,29 @@
 			display: inline-block;
 			padding-right: 2.5em;
 			vertical-align: middle;
+			/*
+			TODO
 			width: 48%;
+			*/
 		}
 
 			.features article .image img {
 				display: block;
+				/*
+				TODO
 				width: 100%;
+				*/
+				width: 150px;
 			}
 
 		.features article .inner {
 			display: inline-block;
 			vertical-align: middle;
+			/*
+			TODO
 			width: 50%;
+			*/
+			width: 70%;
 		}
 
 			.features article .inner > :last-child {
@@ -2599,15 +2614,26 @@
 
 /* One */
 
-	#one:before {
+	#intro:before {
 		background-image: url("../../images/banner.jpg");
 		background-position: top right;
 		background-repeat: no-repeat;
 		background-size: cover;
 		content: '';
 		display: block;
-		height: 15em;
+		height: 7em;
 		width: 100%;
+	}
+
+	#main {
+		color: #555;
+	}
+	#main a {
+		color: #4acaa8;
+	}
+
+	.text-center {
+		text-align: center;
 	}
 
 /* Footer */
